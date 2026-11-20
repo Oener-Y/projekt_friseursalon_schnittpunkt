@@ -12,6 +12,9 @@ const port = process.env.PORT || 3000
 
 app.use(express.json())
 
+app.use(express.static('assets'))
+app.use(express.static('.'))
+
 app.use('/api/leistungen', leistungRoutes)
 app.use('/api/mitarbeiter', mitarbeiterRoutes)
 app.use('/api/termine', termineRoutes)

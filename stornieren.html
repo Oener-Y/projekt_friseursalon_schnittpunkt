@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schnittpunkt - Termin stornieren</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/stornieren.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Schnittpunkt</h1>
+            <p>Dienstag bis Freitag 9 bis 18 Uhr, Samstag 9 bis 14 Uhr</p>
+            <nav>
+                <a href="index.html">Termin buchen</a>
+                <a href="stornieren.html">Termin stornieren</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Termin stornieren</h2>
+            <p>Eine Stornierung ist ohne Anmeldung bis mindestens 24 Stunden vor Terminbeginn möglich.</p>
+
+            <form id="storno-formular">
+                <div class="form-gruppe">
+                    <label for="stornocode-eingabe">Stornocode</label>
+                    <input type="text" id="stornocode-eingabe" placeholder="Ihren Stornocode eingeben" required>
+                </div>
+                <button type="submit" class="ma-btn">Termin stornieren</button>
+            </form>
+
+            <div id="storno-rueckmeldung" style="margin-top: 20px;"></div>
+        </main>
+    </div>
+</body>
+</html>

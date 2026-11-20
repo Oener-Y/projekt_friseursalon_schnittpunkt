@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schnittpunkt - Termin online buchen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Schnittpunkt</h1>
+            <p>Dienstag bis Freitag 9 bis 18 Uhr, Samstag 9 bis 14 Uhr</p>
+            <nav>
+                <a href="index.html">Termin buchen</a>
+                <a href="stornieren.html">Termin stornieren</a>
+                <a href="salon.html">Termin stornieren</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Termin online buchen</h2>
+
+            <section>
+                <h3>1. Leistung wählen</h3>
+                <div id="leistungs-container" class="grid-container">
+                </div>
+            </section>
+
+            <section>
+                <h3>2. Mitarbeiter wählen</h3>
+                <div id="mitarbeiter-container" class="button-group">
+                    <button type="button" class="ma-btn active" data-id="egal">Egal</button>
+                </div>
+            </section>
+
+            <h3>3. Datum wählen</h3>
+            <input type="date" id="datum-auswahl">
+
+            <section>
+                <h3>4. Uhrzeit wählen</h3>
+                <div id="uhrzeit-container" class="button-group">
+                </div>
+            </section>
+
+            <section id="kundendaten-bereich">
+                <h3>5. Kontaktdaten und Buchung abschließen</h3>
+                <div class="form-gruppe">
+                    <label for="kunde-name">Name</label>
+                    <input type="text" id="kunde-name" placeholder="Vor- und Nachname" required>
+                </div>
+                <div class="form-gruppe">
+                    <label for="kunde-telefon">Telefonnummer</label>
+                    <input type="tel" id="kunde-telefon" placeholder="z. B. 0151 12345678" required>
+                </div>
+                <div class="form-gruppe">
+                    <label for="kunde-email">E-Mail</label>
+                    <input type="email" id="kunde-email" placeholder="name@beispiel.de" required>
+                </div>
+                <button type="button" id="termin-buchen-btn" class="buchung-btn">Termin verbindlich buchen</button>
+                <div id="buchung-rueckmeldung" class="rueckmeldung"></div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

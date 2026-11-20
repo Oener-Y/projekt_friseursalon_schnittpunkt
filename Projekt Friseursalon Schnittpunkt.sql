@@ -69,3 +69,18 @@ INSERT INTO termin (kunde_id, mitarbeiter_id, leistung_id, beginn, ende, status,
 (1, 3, 6, '2026-11-17 10:30:00', '2026-11-17 12:00:00', 'gebucht', 75.00),
 (2, 2, 1, '2026-11-17 09:00:00', '2026-11-17 09:30:00', 'gebucht', 28.00),
 (3, 1, 2, '2026-11-17 09:30:00', '2026-11-17 10:15:00', 'gebucht', 42.00);
+
+
+-- UPDATE Stornocode
+USE projekt_friseursalon_schnittpunkt;
+
+ALTER TABLE termin
+ADD COLUMN stornocode VARCHAR(64) NULL UNIQUE;
+
+USE projekt_friseursalon_schnittpunkt;
+
+DELETE FROM termin
+WHERE stornocode LIKE 'code-seed-%';
+
+ALTER TABLE termin
+MODIFY COLUMN stornocode VARCHAR(64) NOT NULL UNIQUE;

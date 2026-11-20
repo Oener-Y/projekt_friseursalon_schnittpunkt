@@ -7,3 +7,4 @@ export async function holeAlleMitarbeiter() {
 export async function holeMitarbeiterNachLeistung(leistungId) {
     return await mitarbeiterRepository.mitarbeiterLeistungAbrufen(leistungId)
 }
+
